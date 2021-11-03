@@ -44,7 +44,7 @@ body {
   left: 50%;
   width: 20px;
   height: 20px;
-  transform: translate(-50% 50%);
+  transform: translate(-50%, 50%);
 }
 
 .img-container img {
@@ -131,7 +131,7 @@ body {
   cursor: pointer;
   margin: 10px 0;
   height: 4px;
-  width: 100%;
+  width: 0%;
 }
 
 .progress {
@@ -141,4 +141,3 @@ body {
   width: 0%;
   transition: width 0.1s linear;
 }
-
