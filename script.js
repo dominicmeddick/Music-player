@@ -26,6 +26,25 @@ function loadSong(song) {
   cover.src `images/${song}.jpg`;
 }
 
+// Play song
+function playSong() {
+  musicContainer.classList.add('play')
+  playBtn.querySelector('i.fas').classList.remove('fa-play');
+  playBtn.querySelector('i.fas').classList.add('fa-pause');
+
+  audio.play();
+}
+
+// Pause song
+function pauseSong() {
+  musicContainer.classList.remove('play')
+  playBtn.querySelector('i.fas').classList.remove('fa-play');
+  playBtn.querySelector('i.fas').classList.add('fa-pause');
+
+  audio.pause();
+}
+
+
 // Event listeners
 playBtn.addEventListener('click', () => {
   const isPlaying = musicContainer.classList.contains('play');
