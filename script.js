@@ -44,6 +44,19 @@ function pauseSong() {
   audio.pause();
 }
 
+// Previous Song
+function prevSong() {
+  songIndex--;
+
+  if(songIndex < 0) {
+    songIndex = songs.length - 1;
+  }
+
+  loadSong(songs[songIndex]);
+
+  playSong();
+}
+
 
 // Event listeners
 playBtn.addEventListener('click', () => {
@@ -55,3 +68,7 @@ playBtn.addEventListener('click', () => {
     playSong();
   }
 });
+
+// Change song
+prevBtn.addEventListener('click', prevSong);
+nextBtn.addEventListener('click', nextSong);
